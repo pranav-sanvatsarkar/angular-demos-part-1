@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Angular Demos Part 1</title>
+	<link href="vendor_css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+	<link href="application_css/style.css" rel="stylesheet" />
+	<script src="vendor_js/angular/angular.min.js"></script>
+	<script src="application_js/angular-demo-app.js"></script>
+</head>
+<body>
+	<form ng-app="demoApp" ng-init="qty=1;cost=2" class="invoice-form">
+		<div class="form-group">
+			<h3>Invoice</h3>
+		</div>
+		<div class="form-group">
+			<label>Quantity</label>
+			<input type="number" class="form-control" placeholder="Quantity" ng-model="qty" />
+		</div>
+		<div class="form-group">
+			<label>Costs</label>
+			<input type="number" class="form-control" placeholder="Quantity" ng-model="cost" />
+		</div>
+		<div class="form-group">
+			<b>Total:</b>{{ qty * cost | currency }}
+		</div>
+	</form>
+</body>
+</html>
